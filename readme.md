@@ -74,7 +74,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull r
 ---
 
 ## 📊 **UML Model**
-O Modelo de UML esta na pasta raiz 
+O Modelo de UML esta na pasta de docs [Clicke aqui](https://github.com/KleberRhuan/Agenda-Ai/blob/main/docs/uml/AgendaAi.drawio) para acessar.
 
 ## 📜 **Licença**
 Este projeto está licenciado sob os termos da licença **MIT**.
