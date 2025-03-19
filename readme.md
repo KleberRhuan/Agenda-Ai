@@ -73,6 +73,9 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull r
 
 ---
 
+## 📊 **UML Model**
+O Modelo de UML esta na pasta raiz 
+
 ## 📜 **Licença**
 Este projeto está licenciado sob os termos da licença **MIT**.
 
