@@ -1,7 +1,7 @@
 BEGIN;
 
-CREATE EXTENSION IF NOT EXISTS citext;
 CREATE SCHEMA IF NOT EXISTS config_schema;
+CREATE EXTENSION IF NOT EXISTS citext WITH SCHEMA config_schema;
 
 CREATE TABLE IF NOT EXISTS config_schema.insurances (
     id BIGSERIAL,
@@ -21,18 +21,18 @@ CREATE TYPE config_schema.address_types AS (
 CREATE SCHEMA IF NOT EXISTS user_schema;
 
 CREATE TABLE IF NOT EXISTS user_schema.roles (
-     id SERIAL,
-     name VARCHAR(50) NOT NULL,
+    id SERIAL,
+    name VARCHAR(50) NOT NULL,
     description TEXT,
     CONSTRAINT roles_pk PRIMARY KEY (id),
     CONSTRAINT roles_name_uq UNIQUE (name)
-    );
+);
 
 CREATE TABLE IF NOT EXISTS user_schema.users (
-     id BIGSERIAL,
-     first_name VARCHAR(255) NOT NULL,
+    id BIGSERIAL,
+    first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
-    email CITEXT NOT NULL,
+    email config_schema.citext NOT NULL,
     cpf VARCHAR(11) NOT NULL,
     date_of_birth DATE NOT NULL,
     address config_schema.address_types,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS user_schema.users (
     CONSTRAINT users_email_uq UNIQUE (email),
     CONSTRAINT users_cpf_chk CHECK (LENGTH(cpf) = 11),
     CONSTRAINT users_insurance_id_fk FOREIGN KEY (insurance_id) REFERENCES config_schema.insurances(id)
-    );
+);
 
 CREATE TABLE IF NOT EXISTS user_schema.user_roles (
     user_id BIGINT NOT NULL,
