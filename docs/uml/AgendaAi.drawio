@@ -1,9 +1,79 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15" version="26.1.1">
   <diagram name="Page-1" id="HEHYhgjBuoOw1G1X0wev">
-    <mxGraphModel>
+    <mxGraphModel dx="4033" dy="2346" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-32" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;appointments&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; date_time: timestamp with time zone&lt;br/&gt; description: text&lt;br/&gt; patient_id: bigint&lt;br/&gt; clinic_id: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="935" width="260" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-33" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;clinics&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; name: varchar(255)&lt;br/&gt; address: address_types&lt;br/&gt; phone: varchar(20)&lt;br/&gt; owner_id: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-8" y="415" width="177" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="OrB3iv7E3T1-Tw3qa0XV-35">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0.33333333333303017" y="-10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-35" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;insurances&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; name: varchar(255)&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-75" y="-111" width="151" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="OrB3iv7E3T1-Tw3qa0XV-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OrB3iv7E3T1-Tw3qa0XV-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-38" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;users&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; first_name: varchar(255)&lt;br/&gt; last_name: varchar(255)&lt;br/&gt; email: citext&lt;br/&gt; cpf: varchar(11)&lt;br/&gt; date_of_birth: date&lt;br/&gt; address: address_types&lt;br/&gt; phone: varchar(20)&lt;br/&gt; insurance_id: bigint&lt;br/&gt; role: roles_type&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="-91" y="57" width="182" height="262" as="geometry" />
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-39" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#595959;exitX=0.750;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="OrB3iv7E3T1-Tw3qa0XV-32" target="OrB3iv7E3T1-Tw3qa0XV-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="85" y="908" />
+              <mxPoint x="80" y="908" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-40" value="clinic_id:id" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="OrB3iv7E3T1-Tw3qa0XV-39">
+          <mxGeometry x="1" y="879" as="geometry" />
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-41" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#595959;exitX=0.250;exitY=0.000;exitDx=0;exitDy=0;entryX=0.250;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="OrB3iv7E3T1-Tw3qa0XV-32" target="OrB3iv7E3T1-Tw3qa0XV-38">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-45" y="908" />
+              <mxPoint x="-40" y="908" />
+              <mxPoint x="-40" y="468" />
+              <mxPoint x="-45" y="468" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-42" value="patient_id:id" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="OrB3iv7E3T1-Tw3qa0XV-41">
+          <mxGeometry x="-136" y="659" as="geometry" />
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-43" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.750;entryY=1.000;entryDx=0;entryDy=0;" edge="1" parent="1" source="OrB3iv7E3T1-Tw3qa0XV-33" target="OrB3iv7E3T1-Tw3qa0XV-38">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="388" />
+              <mxPoint x="46" y="388" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-44" value="owner_id:id" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="OrB3iv7E3T1-Tw3qa0XV-43">
+          <mxGeometry x="-11" y="372" as="geometry" />
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-45" value="" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#595959;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.001;entryDx=0;entryDy=0;" edge="1" parent="1" source="OrB3iv7E3T1-Tw3qa0XV-38" target="OrB3iv7E3T1-Tw3qa0XV-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OrB3iv7E3T1-Tw3qa0XV-46" value="insurance_id:id" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;strokeColor=default;" vertex="1" connectable="0" parent="OrB3iv7E3T1-Tw3qa0XV-45">
+          <mxGeometry x="-111" y="-17" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
