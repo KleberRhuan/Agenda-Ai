@@ -28,25 +28,23 @@ VALUES
     (2, 'Bradesco'),
     (3, 'Qualicorp');
 
-INSERT INTO user_schema.users (id, first_name, last_name, email, cpf, date_of_birth, address, phone, insurance_id, role)
+INSERT INTO user_schema.users (id, first_name, last_name, email, cpf, date_of_birth, street, number, city, state, zip_code, phone, insurance_id, role)
 VALUES
     (1, 'Maria', 'Oliveira', 'maria@example.com', '12345678901', '1990-05-10',
-     ROW('Rua A', '123', 'São Paulo', 'SP', '01000-000')::config_schema.address_types,
+     'Rua A', '123', 'São Paulo', 'SP', '01000-000',
      '11999999999', 1, 'PATIENT'),
 
     (2, 'João', 'Silva', 'joao@example.com', '12345678902', '1985-09-20',
-     ROW('Rua B', '456', 'Rio de Janeiro', 'RJ', '20000-000')::config_schema.address_types,
+     'Rua B', '456', 'Rio de Janeiro', 'RJ', '20000-000',
      '21999999999', 2, 'PROFESSIONAL'),
 
     (3, 'Ana', 'Souza', 'ana@example.com', '12345678903', '1995-04-15',
-     ROW('Rua C', '789', 'Belo Horizonte', 'MG', '30000-000')::config_schema.address_types,
+     'Rua C', '789', 'Belo Horizonte', 'MG', '30000-000',
      '31999999999', 3, 'RECEPTIONIST');
 
-INSERT INTO clinic_schema.clinics (id, name, address, phone, owner_id)
+INSERT INTO clinic_schema.clinics (id, name, street, number, city, state, zip_code, phone, owner_id)
 VALUES
-    (1, 'Clínica Vida',
-     ROW('Rua Saúde', '100', 'São Paulo', 'SP', '01000-100')::config_schema.address_types,
-     '11988888888', 2);
+    (1, 'Clínica Vida', 'Rua Saúde', '100', 'São Paulo', 'SP', '01000-100', '11988888888', 2);
 
 INSERT INTO appointment_schema.appointments (id, date_time, description, patient_id, clinic_id)
 VALUES
