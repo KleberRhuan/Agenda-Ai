@@ -26,11 +26,11 @@ public class Appointment {
     private Status status;
     
     @ManyToOne
-    @JoinColumn(name = "patient_id")
+    @JoinColumn(name = "patient_id", nullable = false)
     private User patient;
 
     @ManyToOne
-    @JoinColumn(name = "professional_id")
+    @JoinColumn(name = "professional_id", nullable = false)
     private User professional;
     
     

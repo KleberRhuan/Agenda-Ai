@@ -13,7 +13,6 @@ public class Clinic {
     @Id
     private Long id;
     
-    @Column(nullable = false)
     private String name;
     
     @Embedded
@@ -22,7 +21,7 @@ public class Clinic {
     private String phone;
     
     @ManyToOne
-    @JoinColumn(name = "owner_id")
+    @JoinColumn(name = "owner_id", nullable = false)
     private User owner;
     
     
