@@ -15,12 +15,14 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Table(schema = "user_schema")
 public class User {
-    enum Role { PATIENT, PROFESSIONAL, RECEPTIONIST }
+    enum Role { PATIENT, PROFESSIONAL, RECEPTIONIST, ADMIN }
     
     @Id
     private Long id;
     
-    private String name;
+    private String firstName;
+    
+    private String lastName;
     
     private String cpf;
     
@@ -37,9 +39,6 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "insurance_id")
     private Insurance insurance;
-    
-    @Enumerated(EnumType.STRING)
-    private Role role;
     
     
 }

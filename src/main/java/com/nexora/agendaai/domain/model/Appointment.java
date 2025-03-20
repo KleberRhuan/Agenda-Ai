@@ -20,18 +20,20 @@ public class Appointment {
     @Id
     private Long id;
     
-    private Instant appointmentDate;
+    private Instant dateTime;
     
     @Enumerated(EnumType.STRING)
     private Status status;
+    
+    private String description;
     
     @ManyToOne
     @JoinColumn(name = "patient_id", nullable = false)
     private User patient;
 
     @ManyToOne
-    @JoinColumn(name = "professional_id", nullable = false)
-    private User professional;
+    @JoinColumn(name = "clinic_id", nullable = false)
+    private Clinic professional;
     
     
 }

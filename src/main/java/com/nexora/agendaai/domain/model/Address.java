@@ -1,6 +1,7 @@
 package com.nexora.agendaai.domain.model;
 
 import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.Size;
 
 @Embeddable
 public class Address {
