@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 
 @Entity
@@ -15,9 +14,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Table(schema = "user_schema")
 public class User {
-    enum Role { PATIENT, PROFESSIONAL, RECEPTIONIST, ADMIN }
+    enum Role {PATIENT, RECEPTIONIST, PROFESSIONAL, ADMIN}
     
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     private String firstName;
@@ -40,5 +40,7 @@ public class User {
     @JoinColumn(name = "insurance_id")
     private Insurance insurance;
     
+    @Enumerated(EnumType.STRING)
+    private Role role;
     
 }

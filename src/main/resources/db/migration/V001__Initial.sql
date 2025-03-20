@@ -1,6 +1,7 @@
 BEGIN;
 
 CREATE SCHEMA IF NOT EXISTS config_schema;
+ALTER DATABASE agenda_ai SET search_path TO config_schema;
 CREATE EXTENSION IF NOT EXISTS citext WITH SCHEMA config_schema;
 
 CREATE TABLE IF NOT EXISTS config_schema.insurances (

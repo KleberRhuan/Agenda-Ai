@@ -11,6 +11,7 @@ import lombok.*;
 @Table(schema = "clinic_schema")
 public class Clinic {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     private String name;

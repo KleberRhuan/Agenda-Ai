@@ -18,6 +18,7 @@ public class Appointment {
     enum Status {SCHEDULED, CONFIRMED, CANCELLED}
     
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     private Instant dateTime;
