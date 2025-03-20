@@ -1,9 +1,10 @@
 package com.nexora.agendaai.domain.model;
 
 import jakarta.persistence.Embeddable;
-import jakarta.validation.constraints.Size;
+import lombok.Getter;
 
 @Embeddable
+@Getter
 public class Address {
     private String street;
     private String number;

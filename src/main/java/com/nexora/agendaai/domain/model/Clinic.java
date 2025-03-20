@@ -8,14 +8,15 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(schema = "clinic_schema")
+@Table(schema = "clinic_schema", name = "clinics")
+
 public class Clinic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     private String name;
-    
+
     @Embedded
     private Address address;
     

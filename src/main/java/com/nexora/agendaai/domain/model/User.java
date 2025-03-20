@@ -29,7 +29,6 @@ public class User {
     private LocalDate dateOfBirth;
     
     @Embedded
-    @Column(columnDefinition = "address_type")
     private Address address;
     
     private String phone;
