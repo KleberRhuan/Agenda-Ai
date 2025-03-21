@@ -1,10 +1,10 @@
 package com.nexora.agendaai.domain.model;
 
 import jakarta.persistence.Embeddable;
-import lombok.Getter;
+import lombok.Data;
 
 @Embeddable
-@Getter
+@Data
 public class Address {
     private String street;
     private String number;
