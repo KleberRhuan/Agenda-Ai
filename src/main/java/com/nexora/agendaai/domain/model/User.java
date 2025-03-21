@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(schema = "user_schema")
+@Table(schema = "user_schema",  name = "users")
 public class User {
     enum Role {PATIENT, RECEPTIONIST, PROFESSIONAL, ADMIN}
     
@@ -41,5 +41,17 @@ public class User {
     
     @Enumerated(EnumType.STRING)
     private Role role;
-    
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+        return getId().equals(user.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return getId().hashCode();
+    }
 }

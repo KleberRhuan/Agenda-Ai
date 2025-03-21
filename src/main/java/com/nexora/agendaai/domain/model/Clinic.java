@@ -9,7 +9,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(schema = "clinic_schema", name = "clinics")
-
 public class Clinic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +24,16 @@ public class Clinic {
     @ManyToOne
     @JoinColumn(name = "owner_id", nullable = false)
     private User owner;
-    
-    
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Clinic clinic = (Clinic) o;
+        return getId().equals(clinic.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return getId().hashCode();
+    }
 }

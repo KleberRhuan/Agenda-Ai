@@ -1,15 +1,11 @@
 package com.nexora.agendaai.domain.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 import java.time.Instant;
 
 @Entity
-@Table(schema = "appointment_schema")
+@Table(schema = "appointment_schema", name = "appointments")
 @Getter
 @Builder
 @NoArgsConstructor
@@ -35,6 +31,16 @@ public class Appointment {
     @ManyToOne
     @JoinColumn(name = "clinic_id", nullable = false)
     private Clinic professional;
-    
-    
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Appointment that = (Appointment) o;
+        return getId().equals(that.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return getId().hashCode();
+    }
 }
